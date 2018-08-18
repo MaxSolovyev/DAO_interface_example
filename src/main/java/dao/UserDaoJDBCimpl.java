@@ -17,7 +17,7 @@ public class UserDaoJDBCimpl implements UserDao {
 
 	@Override
 	public User getUserById(long id) {
-		System.out.println("get user by ID");
+		System.out.println("get user by ID ...");
 		return executor.execQuery("SELECT * FROM users WHERE id='" + id + "'", result -> {
 			result.next();
 			return  new User(
